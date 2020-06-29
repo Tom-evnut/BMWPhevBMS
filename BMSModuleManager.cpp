@@ -136,11 +136,12 @@ void BMSModuleManager::decodecan(CAN_message_t &msg, int debug)
     case 0x060:
       Id = 5;
       break;
+      
     case 0x070:
       Id = 6;
       break;
   }
-  if (CMU < 8 && Id < 5)
+  if (CMU < 14 && Id < 7)
   {
     if (debug == 1)
     {

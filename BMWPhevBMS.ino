@@ -41,7 +41,7 @@ SerialConsole console;
 EEPROMSettings settings;
 
 /////Version Identifier/////////
-int firmver = 280620;
+int firmver = 290620;
 
 //Curent filter//
 float filterFrequency = 5.0 ;
@@ -3093,18 +3093,18 @@ void canread()
     CAB300();
   }
 
-  if (inMsg.id > 0x99 && inMsg.id < 0x180)//do VW BMS magic if ids are ones identified to be modules
+  if (inMsg.id > 0x99 && inMsg.id < 0x180)//do BMS magic if ids are ones identified to be modules
   {
     if (candebug == 1 && debug == 1)
     {
-      bms.decodecan(inMsg, 1); //do VW BMS if ids are ones identified to be modules
+      bms.decodecan(inMsg, 1); //do  BMS if ids are ones identified to be modules
     }
     else
     {
-      bms.decodecan(inMsg, 0); //do VW BMS if ids are ones identified to be modules
+      bms.decodecan(inMsg, 0); //do BMS if ids are ones identified to be modules
     }
   }
-  if ((inMsg.id & 0xFF0) == 0x1780)    // Determine if ID is standard (11 bits) or extended (29 bits)
+  if ((inMsg.id & 0xFF0) == 0x180)    // Determine if ID is standard (11 bits) or extended (29 bits)
   {
     if (candebug == 1 && debug == 1)
     {
