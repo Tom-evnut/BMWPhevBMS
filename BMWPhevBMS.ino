@@ -17,6 +17,8 @@
   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
   TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+  Thank you to James Warner for proving out canbus decoding and finding balancing bits
 */
 
 #include "BMSModuleManager.h"
@@ -41,7 +43,7 @@ SerialConsole console;
 EEPROMSettings settings;
 
 /////Version Identifier/////////
-int firmver = 290620;
+int firmver = 030720;
 
 //Curent filter//
 float filterFrequency = 5.0 ;
@@ -3385,31 +3387,7 @@ void sendcommand() //Send Can Command to get data from slaves
     }
   }
 
-  //////////////
-  /*
-    if (settings.CSCvariant == BmwI3)
-    {
-      if (nextmes == 8)
-      {
-        nextmes = 0;
-        if (testcycle < 4)
-        {
-          testcycle++;
-        }
-      }
-    }
-    if (settings.CSCvariant == MiniE)
-    {
-      if (nextmes == 0xC)
-      {
-        nextmes = 0;
-        if (testcycle < 4)
-        {
-          testcycle++;
-        }
-      }
-    }
-  */
+
   msg.id  = 0x080 | (nextmes);
   msg.len = 8;
   if (balancecells == 1)
@@ -3422,8 +3400,8 @@ void sendcommand() //Send Can Command to get data from slaves
     msg.buf[0] = 0x42;
     msg.buf[1] = 0x0E;
   }
-  msg.buf[2] = 0xFF; //balancing bits
-  msg.buf[3] = 0xFF; //balancing bits
+  msg.buf[2] = 0x00; //balancing bits
+  msg.buf[3] = 0x00; //balancing bits
 
 
 
@@ -3435,7 +3413,14 @@ void sendcommand() //Send Can Command to get data from slaves
   else
   {
 
-    msg.buf[4] = 0x60;
+    if (balancecells == 1)
+    {
+      msg.buf[4] = 0x68;
+    }
+    else
+    {
+      msg.buf[4] = 0x60;
+    }
     msg.buf[5] = 0x01;
   }
 
@@ -3446,19 +3431,7 @@ void sendcommand() //Send Can Command to get data from slaves
   }
 
   msg.buf[7] = getcheck(msg, nextmes);
-  //Serial.print(msg.buf[7],HEX);
-  /*
-    if (nextmes == 7)
-    {
-    Serial.println();
-    for (int y = 0; y < 8; y++)
-    {
-      Serial.print(msg.buf[y], HEX);
-      Serial.print("|");
-    }
-    Serial.println();
-    }
-  */
+
   delay(2);
   Can0.write(msg);
   mescycle ++;
