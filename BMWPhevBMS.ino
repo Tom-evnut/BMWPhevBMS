@@ -43,7 +43,7 @@ SerialConsole console;
 EEPROMSettings settings;
 
 /////Version Identifier/////////
-int firmver = 040720;
+int firmver = 060720;
 
 //Curent filter//
 float filterFrequency = 5.0 ;
@@ -3351,40 +3351,41 @@ void balancing()
 
 void sendcommand() //Send Can Command to get data from slaves
 {
-  if (mescycle == 0xF)
-  {
-    mescycle = 0;
-
-    if (balancetimer < millis())
-    {
-      balancepauze = 1;
-      if (debug == 1)
-      {
-        Serial.println();
-        Serial.println("Reset Balance Timer");
-        Serial.println();
-      }
-      balancetimer = millis() + ((settings.balanceDuty + 60) * 1000);
-    }
-    else
-    {
-      balancepauze = 0;
-    }
-  }
-  if (balancepauze == 1)
-  {
-    balancecells = 0;
-  }
-
   ///////module id cycling/////////
 
   if (nextmes == 6)
   {
+    mescycle ++;
     nextmes = 0;
     if (testcycle < 4)
     {
       testcycle++;
     }
+    
+    if (mescycle == 0xF)
+    {
+      mescycle = 0;
+
+      if (balancetimer < millis())
+      {
+        balancepauze = 1;
+        if (debug == 1)
+        {
+          Serial.println();
+          Serial.println("Reset Balance Timer");
+          Serial.println();
+        }
+        balancetimer = millis() + ((settings.balanceDuty + 60) * 1000);
+      }
+      else
+      {
+        balancepauze = 0;
+      }
+    }
+  }
+  if (balancepauze == 1)
+  {
+    balancecells = 0;
   }
 
 
@@ -3403,8 +3404,6 @@ void sendcommand() //Send Can Command to get data from slaves
   msg.buf[2] = 0x00; //balancing bits
   msg.buf[3] = 0x00; //balancing bits
 
-
-
   if (testcycle < 3)
   {
     msg.buf[4] = 0x20;
@@ -3419,7 +3418,7 @@ void sendcommand() //Send Can Command to get data from slaves
     }
     else
     {
-      msg.buf[4] = 0x60;
+      msg.buf[4] = 0x40;
     }
     msg.buf[5] = 0x01;
   }
@@ -3434,7 +3433,6 @@ void sendcommand() //Send Can Command to get data from slaves
 
   delay(2);
   Can0.write(msg);
-  mescycle ++;
   nextmes ++;
 
   if (bms.checkstatus() == true)
