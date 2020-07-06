@@ -3398,8 +3398,8 @@ void sendcommand() //Send Can Command to get data from slaves
   }
   else
   {
-    msg.buf[0] = 0x42;
-    msg.buf[1] = 0x0E;
+    msg.buf[0] = 0xC7;
+    msg.buf[1] = 0x10;
   }
   msg.buf[2] = 0x00; //balancing bits
   msg.buf[3] = 0x00; //balancing bits
