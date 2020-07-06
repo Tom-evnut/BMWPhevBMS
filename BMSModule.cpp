@@ -62,7 +62,7 @@ void BMSModule::decodecan(int Id, CAN_message_t &msg, bool Ign)
   {
     case 0:
       error = msg.buf[0] + (msg.buf[1] << 8) + (msg.buf[2] << 16) + (msg.buf[3] << 24);
-      //balstat = ((msg.buf[5] & 0x0F ) << 8) + msg.buf[4];
+      balstat = (msg.buf[5]<< 8) + msg.buf[4];
       break;
 
     case 1:
