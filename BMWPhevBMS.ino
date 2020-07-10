@@ -43,7 +43,7 @@ SerialConsole console;
 EEPROMSettings settings;
 
 /////Version Identifier/////////
-int firmver = 070720;
+int firmver = 100720;
 
 //Curent filter//
 float filterFrequency = 5.0 ;
@@ -197,7 +197,8 @@ uint8_t Imod, mescycle = 0;
 uint8_t nextmes = 0;
 uint16_t commandrate = 50;
 uint8_t testcycle = 0;
-
+uint8_t DMC[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+uint8_t Unassigned, NextID = 0;
 
 //BMW checksum variable///
 
@@ -890,6 +891,15 @@ void loop()
     {
       bms.setBalIgnore(false);
     }
+
+    ///Set Ids to unnasgined//
+
+    if (Unassigned > 0)
+    {
+      assignID();
+    }
+
+    ////
 
     resetwdog();
   }
@@ -2082,6 +2092,22 @@ void menu()
         incomingByte = 'd';
         break;
 
+      case 'x':
+        menuload = 1;
+        resetIDdebug();
+        incomingByte = 'd';
+        break;
+
+      case 'y':
+        menuload = 1;
+        if (Serial.available() > 0)
+        {
+          NextID = Serial.parseInt();
+        }
+
+        incomingByte = 'd';
+        break;
+
       case 113: //q for quite menu
 
         menuload = 0;
@@ -2889,6 +2915,15 @@ void menu()
         SERIALCONSOLE.print("b - balance duration :");
         SERIALCONSOLE.print(settings.balanceDuty);
         SERIALCONSOLE.println(" S time before starting is 60s");
+
+        ///Testing ID assignment///
+        SERIALCONSOLE.print("y - NextID :");
+        SERIALCONSOLE.print(NextID);
+        SERIALCONSOLE.println();
+        SERIALCONSOLE.print("x - wipe CSC ids");
+        SERIALCONSOLE.println("");
+        ///////////
+
         SERIALCONSOLE.println("r - reset balance debug");
         SERIALCONSOLE.println("q - Go back to menu");
         menuload = 4;
@@ -3094,6 +3129,40 @@ void canread()
   {
     CAB300();
   }
+
+
+  //ID not assigned//
+  if (inMsg.id == 0xF0)
+  {
+    Unassigned++;
+    Serial.print(millis());
+    if ((inMsg.id & 0x80000000) == 0x80000000)    // Determine if ID is standard (11 bits) or extended (29 bits)
+      sprintf(msgString, "Extended ID: 0x%.8lX  DLC: %1d  Data:", (inMsg.id & 0x1FFFFFFF), inMsg.len);
+    else
+      sprintf(msgString, ",0x%.3lX,false,%1d", inMsg.id, inMsg.len);
+
+    Serial.print(msgString);
+
+    if ((inMsg.id & 0x40000000) == 0x40000000) {  // Determine if message is a remote request frame.
+      sprintf(msgString, " REMOTE REQUEST FRAME");
+      Serial.print(msgString);
+    } else {
+      for (byte i = 0; i < inMsg.len; i++) {
+        sprintf(msgString, ", 0x%.2X", inMsg.buf[i]);
+        DMC[i] = inMsg.buf[i];
+        Serial.print(msgString);
+      }
+    }
+
+    Serial.println();
+    for (byte i = 0; i < 8; i++)
+    {
+      Serial.print(DMC[i], HEX);
+      Serial.print("|");
+    }
+    Serial.println();
+  }
+  ////
 
   if (inMsg.id > 0x99 && inMsg.id < 0x180)//do BMS magic if ids are ones identified to be modules
   {
@@ -3361,7 +3430,7 @@ void sendcommand() //Send Can Command to get data from slaves
     {
       testcycle++;
     }
-    
+
     if (mescycle == 0xF)
     {
       mescycle = 0;
@@ -3740,4 +3809,106 @@ void resetbalancedebug()
   msg.buf[7] = 0x00;
 
   Can0.write(msg);
+}
+
+void resetIDdebug()
+{
+  //Rest all possible Ids
+  for (int ID = 0; ID < 15; ID++)
+  {
+    msg.id  =  0x0A0; //broadcast to all CSC
+    msg.len = 8;
+    msg.ext = 0;
+    msg.buf[0] = 0xA1;
+    msg.buf[1] = ID;
+    msg.buf[2] = 0xFF;
+    msg.buf[3] = 0xFF;
+    msg.buf[4] = 0xFF;
+    msg.buf[5] = 0xFF;
+    msg.buf[6] = 0xFF;
+    msg.buf[7] = 0xFF;
+
+    Can0.write(msg);
+
+    delay(2);
+  }
+  //NextID = 0;
+
+  //check for found unassigned CSC
+  Unassigned = 0;
+
+  msg.id  =  0x0A0; //broadcast to all CSC
+  msg.len = 8;
+  msg.ext = 0;
+  msg.buf[0] = 0x37;
+  msg.buf[1] = 0xFF;
+  msg.buf[2] = 0xFF;
+  msg.buf[3] = 0xFF;
+  msg.buf[4] = 0xFF;
+  msg.buf[5] = 0xFF;
+  msg.buf[6] = 0xFF;
+  msg.buf[7] = 0xFF;
+
+  Can0.write(msg);
+
+}
+
+void findUnassigned ()
+{
+  Unassigned = 0;
+  //check for found unassigned CSC
+  msg.id  =  0x0A0; //broadcast to all CSC
+  msg.len = 8;
+  msg.ext = 0;
+  msg.buf[0] = 0x37;
+  msg.buf[1] = 0xFF;
+  msg.buf[2] = 0xFF;
+  msg.buf[3] = 0xFF;
+  msg.buf[4] = 0xFF;
+  msg.buf[5] = 0xFF;
+  msg.buf[6] = 0xFF;
+  msg.buf[7] = 0xFF;
+
+  Can0.write(msg);
+}
+
+void assignID()
+{
+  msg.id  =  0x0A0; //broadcast to all CSC
+  msg.len = 8;
+  msg.ext = 0;
+  msg.buf[0] = 0x12;
+  msg.buf[1] = 0xAB;
+  msg.buf[2] = DMC[0];
+  msg.buf[3] = DMC[1];
+  msg.buf[4] = DMC[2];
+  msg.buf[5] = DMC[3];
+  msg.buf[6] = 0xFF;
+  msg.buf[7] = 0xFF;
+
+  Can0.write(msg);
+
+  delay(30);
+
+  msg.buf[1] = 0xBA;
+  msg.buf[2] = DMC[4];
+  msg.buf[3] = DMC[5];
+  msg.buf[4] = DMC[6];
+  msg.buf[5] = DMC[7];
+
+  Can0.write(msg);
+
+  delay(10);
+  msg.buf[0] = 0x5B;
+  msg.buf[1] = NextID;
+  Can0.write(msg);
+
+  delay(10);
+  msg.buf[0] = 0x37;
+  msg.buf[1] = NextID;
+  Can0.write(msg);
+
+  NextID++;
+
+  findUnassigned();
 }
