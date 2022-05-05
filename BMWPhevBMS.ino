@@ -43,7 +43,7 @@ SerialConsole console;
 EEPROMSettings settings;
 
 /////Version Identifier/////////
-int firmver = 210907;
+int firmver = 220505;
 
 //Curent filter//
 float filterFrequency = 5.0 ;
@@ -510,7 +510,7 @@ void loop()
 
         if (storagemode == 1)
         {
-          if (bms.getHighCellVolt() > settings.StoreVsetpoint)
+          if (bms.getHighCellVolt() > settings.StoreVsetpoint || chargecurrent == 0)
           {
             digitalWrite(OUT3, LOW);//turn off charger
             contctrl = contctrl & 253;
@@ -546,7 +546,7 @@ void loop()
         }
         else
         {
-          if (bms.getHighCellVolt() > settings.OverVSetpoint || bms.getHighCellVolt() > settings.ChargeVsetpoint)
+          if (bms.getHighCellVolt() > settings.OverVSetpoint || bms.getHighCellVolt() > settings.ChargeVsetpoint || chargecurrent == 0)
           {
             if ((millis() - overtriptimer) > settings.triptime)
             {
