@@ -43,7 +43,7 @@ SerialConsole console;
 EEPROMSettings settings;
 
 /////Version Identifier/////////
-int firmver = 220505;
+int firmver = 220531;
 
 //Curent filter//
 float filterFrequency = 5.0 ;
@@ -162,7 +162,7 @@ int sensor = 1;
 int SOC = 100; //State of Charge
 int SOCset = 0;
 int SOCtest = 0;
-
+int SOCmem = 0;
 
 ///charger variables
 int maxac1 = 16; //Shore power 16A per charger
@@ -417,6 +417,25 @@ void setup()
   bms.setPstrings(settings.Pstrings);
   bms.setSensors(settings.IgnoreTemp, settings.IgnoreVolt, settings.TempOff);
 
+
+  //SOC recovery//
+
+  SOC = (EEPROM.read(1000));
+  if (settings.voltsoc == 1)
+  {
+    SOCmem = 0;
+  }
+  else
+  {
+    if (SOC > 100)
+    {
+      SOCmem = 0;
+    }
+    else
+    {
+      SOCmem = 1;
+    }
+  }
   ////Calculate fixed numbers
   pwmcurmin = (pwmcurmid / 50 * pwmcurmax * -1);
   ////
@@ -1446,7 +1465,7 @@ void getcurrent()
 
 void updateSOC()
 {
-  if (SOCset == 0)
+  if (SOCset == 0&& SOCmem == 0)
   {
     if (millis() > 9000)
     {
@@ -1454,7 +1473,7 @@ void updateSOC()
     }
     if (millis() > 10000)
     {
-      SOC = map(uint16_t(bms.getAvgCellVolt() * 1000), settings.socvolt[0], settings.socvolt[2], settings.socvolt[1], settings.socvolt[3]);
+      SOC = map(uint16_t(bms.getLowCellVolt() * 1000), settings.socvolt[0], settings.socvolt[2], settings.socvolt[1], settings.socvolt[3]);
 
       ampsecond = (SOC * settings.CAP * settings.Pstrings * 10) / 0.27777777777778 ;
       SOCset = 1;
@@ -1475,7 +1494,7 @@ void updateSOC()
   */
   if (settings.voltsoc == 1)
   {
-    SOC = map(uint16_t(bms.getAvgCellVolt() * 1000), settings.socvolt[0], settings.socvolt[2], settings.socvolt[1], settings.socvolt[3]);
+    SOC = map(uint16_t(bms.getLowCellVolt() * 1000), settings.socvolt[0], settings.socvolt[2], settings.socvolt[1], settings.socvolt[3]);
 
     ampsecond = (SOC * settings.CAP * settings.Pstrings * 10) / 0.27777777777778 ;
   }
@@ -4259,3 +4278,10 @@ void isrCP ()
     accurlim = ((duration - (micros() - pilottimer + 35)) * 60) / duration; //pilottimer + "xx" optocoupler decade ms
   }
 }  // ******** end of isr CP ********
+
+void low_voltage_isr(void) {
+  EEPROM.update(1000, uint8_t(SOC));
+
+  PMC_LVDSC2 |= PMC_LVDSC2_LVWACK;  // clear if we can
+  PMC_LVDSC1 |= PMC_LVDSC1_LVDACK;
+}
