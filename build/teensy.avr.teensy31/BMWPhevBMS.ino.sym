@@ -1,0 +1,976 @@
+
+C:\Users\tomde\AppData\Local\Temp\arduino\sketches\DBFEEBE2320E44169C10E1E3B07D1B50/BMWPhevBMS.ino.elf:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000000 l    d  .text	00000000 .text
+00015868 l    d  .fini	00000000 .fini
+1fff8000 l    d  .usbdescriptortable	00000000 .usbdescriptortable
+1fff8200 l    d  .dmabuffers	00000000 .dmabuffers
+1fff83bc l    d  .usbbuffers	00000000 .usbbuffers
+1fff8720 l    d  .data	00000000 .data
+1fff9168 l    d  .bss	00000000 .bss
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loclists	00000000 .debug_loclists
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 l    df *ABS*	00000000 mk20dx128.c
+00009bc0 l     F .text	0000000c startup_default_early_hook
+00009bcc l     F .text	00000002 startup_default_late_hook
+00000000 l    df *ABS*	00000000 crtstuff.c
+00000410 l     F .text	00000000 register_tm_clones
+00000434 l     F .text	00000000 frame_dummy
+1fff9168 l     O .bss	00000000 object.0
+00015858 l     O .text	00000000 __frame_dummy_init_array_entry
+00000000 l    df *ABS*	00000000 BMSModule.cpp
+00000000 l    df *ABS*	00000000 BMSModuleManager.cpp
+00000000 l    df *ABS*	00000000 BMWPhevBMS.ino.cpp
+0000158c l     F .text	00000054 long map<unsigned short, int, int, int, int>(unsigned short, int, int, int, int, std::enable_if<std::is_integral<unsigned short>::value, void>::type*) [clone .isra.0]
+000015e0 l     F .text	00000024 Print::println(char const*) [clone .isra.0]
+0000739c l     F .text	00000050 _GLOBAL__sub_I_bms
+00007620 l       .text	00000000 L_31694_delayMicroseconds
+00015060 l     O .text	0000000c finalxor
+00000000 l    df *ABS*	00000000 CRC8.cpp
+00000000 l    df *ABS*	00000000 Logger.cpp
+00000000 l    df *ABS*	00000000 SerialConsole.cpp
+00000000 l    df *ABS*	00000000 FlexCAN.cpp
+0000864c l     F .text	0000000c _GLOBAL__sub_I_Can0
+00000000 l    df *ABS*	00000000 ADC.cpp
+00000000 l    df *ABS*	00000000 ADC_Module.cpp
+00000000 l    df *ABS*	00000000 SPI.cpp
+00008e88 l     F .text	00000038 _GLOBAL__sub_I__Z15_spi_dma_rxISR0v
+00000000 l    df *ABS*	00000000 FilterOnePole.cpp
+00000000 l    df *ABS*	00000000 EventResponder.cpp
+00000000 l    df *ABS*	00000000 HardwareSerial2.cpp
+00000000 l    df *ABS*	00000000 HardwareSerial3.cpp
+00000000 l    df *ABS*	00000000 Print.cpp
+00009378 l     F .text	00000082 Print::printNumber(unsigned long, unsigned char, unsigned char) [clone .part.0]
+00000000 l    df *ABS*	00000000 Stream.cpp
+00000000 l    df *ABS*	00000000 analog.c
+1fffdcc0 l     O .bss	00000001 analog_reference_internal
+1fffdcc1 l     O .bss	00000001 calibrating
+1fff88e4 l     O .data	00000001 analog_config_bits
+1fff88e5 l     O .data	00000001 analog_num_average
+00000000 l    df *ABS*	00000000 eeprom.c
+00000000 l    df *ABS*	00000000 main.cpp
+00000000 l    df *ABS*	00000000 memcpy-armv7m.S.o
+00000000 l    df *ABS*	00000000 new.cpp
+00000000 l    df *ABS*	00000000 nonstd.c
+00000000 l    df *ABS*	00000000 pins_teensy.c
+00009ccc l     F .text	00000002 dummy_isr
+1fff8720 l     F .data	00000034 port_E_isr
+1fff8754 l     F .data	00000034 port_D_isr
+1fff8788 l     F .data	00000034 port_C_isr
+1fff87bc l     F .data	00000034 port_B_isr
+1fff87f0 l     F .data	00000034 port_A_isr
+00009cd0 l     F .text	00000044 digitalWrite.part.0
+00009e10 l     F .text	00000002 startup_default_middle_hook
+1fff88ec l     O .data	00000001 analog_write_res
+000152b4 l     O .text	00000014 CSWTCH.39
+00000000 l    df *ABS*	00000000 serial2.c
+1fffdcc8 l     O .bss	00000004 rts_pin
+1fffdccc l     O .bss	00000040 rx_buffer
+1fffdd0c l     O .bss	00000001 rx_buffer_head
+1fffdd10 l     O .bss	00000004 rx_buffer_storage_
+1fffdd14 l     O .bss	00000001 rx_buffer_tail
+1fffdd18 l     O .bss	00000004 transmit_pin
+1fffdd1c l     O .bss	00000001 transmitting
+1fffdd20 l     O .bss	00000028 tx_buffer
+1fffdd48 l     O .bss	00000001 tx_buffer_head
+1fffdd4c l     O .bss	00000004 tx_buffer_storage_
+1fffdd50 l     O .bss	00000001 tx_buffer_tail
+1fff89d0 l     O .data	00000004 rts_high_watermark_
+1fff89d4 l     O .data	00000004 rts_low_watermark_
+1fff89d8 l     O .data	00000004 rx_buffer_total_size_
+1fff89dc l     O .data	00000001 rx_pin_num
+1fff89e0 l     O .data	00000004 tx_buffer_total_size_
+1fff89e4 l     O .data	00000001 tx_pin_num
+00000000 l    df *ABS*	00000000 serial3.c
+0000acb8 l     F .text	000000ec serial3_putchar.part.0
+1fffdd54 l     O .bss	00000004 rts_pin
+1fffdd58 l     O .bss	00000040 rx_buffer
+1fffdd98 l     O .bss	00000001 rx_buffer_head
+1fffdd9c l     O .bss	00000004 rx_buffer_storage_
+1fffdda0 l     O .bss	00000001 rx_buffer_tail
+1fffdda4 l     O .bss	00000004 transmit_pin
+1fffdda8 l     O .bss	00000001 transmitting
+1fffddac l     O .bss	00000028 tx_buffer
+1fffddd4 l     O .bss	00000001 tx_buffer_head
+1fffddd8 l     O .bss	00000004 tx_buffer_storage_
+1fffdddc l     O .bss	00000001 tx_buffer_tail
+1fff89e8 l     O .data	00000004 rts_high_watermark_
+1fff89ec l     O .data	00000004 rts_low_watermark_
+1fff89f0 l     O .data	00000004 rx_buffer_total_size_
+1fff89f4 l     O .data	00000004 tx_buffer_total_size_
+1fff89f8 l     O .data	00000001 tx_pin_num
+00000000 l    df *ABS*	00000000 serialEvent2.cpp
+00000000 l    df *ABS*	00000000 serialEvent3.cpp
+00000000 l    df *ABS*	00000000 usb_dev.c
+1fffdde0 l     O .bss	00000040 ep0_rx0_buf
+1fffde20 l     O .bss	00000040 ep0_rx1_buf
+1fffde60 l     O .bss	00000001 ep0_tx_bdt_bank
+1fffde61 l     O .bss	00000001 ep0_tx_data_toggle
+1fffde62 l     O .bss	00000002 ep0_tx_len
+1fffde64 l     O .bss	00000004 ep0_tx_ptr
+1fffde68 l     O .bss	00000008 reply_buffer
+1fffde70 l     O .bss	00000010 rx_first
+1fffde80 l     O .bss	00000010 rx_last
+1fffde90 l     O .bss	00000008 setup
+1fffde98 l     O .bss	00000010 tx_first
+1fffdea8 l     O .bss	00000010 tx_last
+1fffdeb8 l     O .bss	00000004 tx_state
+1fff8000 l     O .usbdescriptortable	000000a0 table
+00000000 l    df *ABS*	00000000 usb_inst.cpp
+00000000 l    df *ABS*	00000000 usb_mem.c
+1fff8a0c l     O .data	00000004 usb_buffer_available
+00000000 l    df *ABS*	00000000 usb_serial.c
+1fffdecc l     O .bss	00000004 rx_packet
+1fffded0 l     O .bss	00000001 transmit_previous_timeout
+1fffded1 l     O .bss	00000001 tx_noautoflush
+1fffded4 l     O .bss	00000004 tx_packet
+00000000 l    df *ABS*	00000000 yield.cpp
+1fffdee9 l     O .bss	00000001 yield::running
+00000000 l    df *ABS*	00000000 HardwareSerial.cpp
+00000000 l    df *ABS*	00000000 serialEvent.cpp
+00000000 l    df *ABS*	00000000 usb_desc.c
+1fff8a14 l     O .data	00000043 config_descriptor
+1fff8a58 l     O .data	00000012 device_descriptor
+00000000 l    df *ABS*	00000000 libm_a-wf_exp.o
+00000000 l    df *ABS*	00000000 libm_a-sf_finite.o
+00000000 l    df *ABS*	00000000 libm_a-ef_exp.o
+00000000 l    df *ABS*	00000000 libm_a-math_errf.o
+0000c4f8 l     F .text	00000012 with_errnof
+0000c50c l     F .text	00000026 xflowf
+00000000 l    df *ABS*	00000000 _arm_addsubdf3.o
+00000000 l    df *ABS*	00000000 _arm_cmpdf2.o
+00000000 l    df *ABS*	00000000 _arm_unorddf2.o
+00000000 l    df *ABS*	00000000 _arm_fixunsdfsi.o
+00000000 l    df *ABS*	00000000 _arm_addsubsf3.o
+00000000 l    df *ABS*	00000000 _arm_muldivsf3.o
+00000000 l    df *ABS*	00000000 _arm_cmpsf2.o
+00000000 l    df *ABS*	00000000 _arm_fixsfsi.o
+00000000 l    df *ABS*	00000000 _arm_fixunssfsi.o
+00000000 l    df *ABS*	00000000 libc_a-malloc.o
+00000000 l    df *ABS*	00000000 libc_a-mallocr.o
+00000000 l    df *ABS*	00000000 libc_a-mlock.o
+00000000 l    df *ABS*	00000000 libc_a-reallocr.o
+00000000 l    df *ABS*	00000000 libc_a-findfp.o
+0000d9cc l     F .text	00000018 stdio_exit_handler
+0000d9e4 l     F .text	00000040 cleanup_stdio
+0000da24 l     F .text	000000d4 global_stdio_init.part.0
+00000000 l    df *ABS*	00000000 libc_a-fwalk.o
+00000000 l    df *ABS*	00000000 libc_a-sprintf.o
+00000000 l    df *ABS*	00000000 libc_a-stdio.o
+00000000 l    df *ABS*	00000000 libc_a-memmove.o
+00000000 l    df *ABS*	00000000 libc_a-memset.o
+00000000 l    df *ABS*	00000000 libc_a-strncpy.o
+00000000 l    df *ABS*	00000000 libc_a-locale.o
+00000000 l    df *ABS*	00000000 libc_a-closer.o
+00000000 l    df *ABS*	00000000 libc_a-lseekr.o
+00000000 l    df *ABS*	00000000 libc_a-readr.o
+00000000 l    df *ABS*	00000000 libc_a-sbrkr.o
+00000000 l    df *ABS*	00000000 libc_a-writer.o
+00000000 l    df *ABS*	00000000 libc_a-errno.o
+00000000 l    df *ABS*	00000000 libc_a-init.o
+00000000 l    df *ABS*	00000000 libc_a-lock.o
+00000000 l    df *ABS*	00000000 libc_a-strlen.o
+00000000 l    df *ABS*	00000000 libc_a-__call_atexit.o
+0000e09c l     F .text	00000014 register_fini
+00000000 l    df *ABS*	00000000 libc_a-atexit.o
+00000000 l    df *ABS*	00000000 libc_a-freer.o
+00000000 l    df *ABS*	00000000 libc_a-mbtowc_r.o
+00000000 l    df *ABS*	00000000 libc_a-mprec.o
+00000000 l    df *ABS*	00000000 libc_a-wctomb_r.o
+00000000 l    df *ABS*	00000000 libc_a-svfprintf.o
+00000000 l    df *ABS*	00000000 libc_a-fclose.o
+00000000 l    df *ABS*	00000000 libc_a-fflush.o
+00000000 l    df *ABS*	00000000 libc_a-localeconv.o
+00000000 l    df *ABS*	00000000 libc_a-fini.o
+00000000 l    df *ABS*	00000000 libc_a-memchr.o
+00000000 l    df *ABS*	00000000 libm_a-s_frexp.o
+00000000 l    df *ABS*	00000000 libc_a-__atexit.o
+00000000 l    df *ABS*	00000000 libc_a-assert.o
+00000000 l    df *ABS*	00000000 libc_a-callocr.o
+00000000 l    df *ABS*	00000000 libc_a-dtoa.o
+00010b70 l     F .text	00000128 quorem
+00000000 l    df *ABS*	00000000 libc_a-wcrtomb.o
+00000000 l    df *ABS*	00000000 libc_a-wcsrtombs.o
+00000000 l    df *ABS*	00000000 libc_a-fiprintf.o
+00000000 l    df *ABS*	00000000 libc_a-svfiprintf.o
+00000000 l    df *ABS*	00000000 libc_a-vfiprintf.o
+00011ce0 l     F .text	00000076 __sprint_r.part.0
+00012cdc l     F .text	00000080 __sbprintf
+00000000 l    df *ABS*	00000000 libc_a-fvwrite.o
+00000000 l    df *ABS*	00000000 libc_a-wsetup.o
+00000000 l    df *ABS*	00000000 libc_a-fputwc.o
+00000000 l    df *ABS*	00000000 libc_a-wcsnrtombs.o
+00000000 l    df *ABS*	00000000 libc_a-makebuf.o
+00000000 l    df *ABS*	00000000 libc_a-wbuf.o
+00000000 l    df *ABS*	00000000 libc_a-fstatr.o
+00000000 l    df *ABS*	00000000 libc_a-isattyr.o
+00000000 l    df *ABS*	00000000 _arm_muldivdf3.o
+00000000 l    df *ABS*	00000000 _arm_fixdfsi.o
+00000000 l    df *ABS*	00000000 libc_a-ctype_.o
+00000000 l    df *ABS*	00000000 crti.o
+00000000 l    df *ABS*	00000000 crtn.o
+00000000 l    df *ABS*	00000000 libc_a-impure.o
+00008760 g     F .text	00000004 ADC_Module::getMaxValue()
+1fff918c g     O .bss	00000004 Charged
+00003c80 g     F .text	000000ac outputdebug()
+00009bb8  w    F .text	00000006 adc0_isr
+00001604 g     F .text	00000188 loadSettings()
+0000c9cc g     F .text	0000002c .hidden __aeabi_dcmpun
+0000be30 g     F .text	0000002c usb_serial_available
+0000456c g     F .text	00001fac menu()
+1fffd9b4 g     O .bss	00000004 pilottimer
+000134f4 g     F .text	00000024 _isatty_r
+0000c990 g     F .text	00000012 .hidden __aeabi_dcmple
+00006518 g     F .text	000000c4 assignID()
+0000c8cc g     F .text	0000007a .hidden __cmpdf2
+00009c6c g     F .text	00000004 operator new[](unsigned int)
+0000de90 g     F .text	0000002c _lseek_r
+0000c0a0  w    F .text	000000f0 yield
+00009240  w    F .text	0000000c HardwareSerial3::write(unsigned char)
+0000c8cc g     F .text	0000007a .hidden __eqdf2
+1fff8a70 g     O .data	00000018 usb_string_manufacturer_name_default
+0000c860 g     F .text	0000005a .hidden __floatdidf
+00009b74  w    F .text	00000044 hard_fault_isr
+00009208 g     F .text	0000002c HardwareSerial3::begin(unsigned long)
+00009bb8  w    F .text	00000006 dma_ch6_isr
+000007c8 g     F .text	00000006 BMSModule::getCUVCells()
+1fffe070 g     O .bss	00000001 __lock___atexit_recursive_mutex
+00008d3c  w    F .text	0000013c SPIClass::dma_rxisr()
+00011b50 g     F .text	0000004c _wcrtomb_r
+00002a90 g     F .text	00000180 calcur()
+0000b05c g     F .text	00000014 serial3_putchar
+0000940c g     F .text	0000001c Print::println()
+00000aec g     F .text	00000048 BMSModuleManager::seriescells()
+0000a994 g     F .text	00000028 serial2_available
+0000dc38 g     F .text	00000020 __sseek
+0000daf8 g     F .text	0000003c __sinit
+00009bb8  w    F .text	00000006 uart0_lon_isr
+0000b3fc g     F .text	00000080 usb_rx_memory
+00013418 g     F .text	000000b0 __swbuf_r
+00009138  w    F .text	00000008 HardwareSerial2::setTX(unsigned char, bool)
+1fffd794 g     O .bss	00000004 conttimer1
+00009bb8  w    F .text	00000006 dma_ch8_isr
+0000826c g     F .text	000000e6 FlexCAN::write(CAN_message_t const&)
+00008c08 g     F .text	00000072 ADC_Module::setAveraging(unsigned char)
+0000d5e8 g     F .text	0000000c __malloc_unlock
+1fff88f0 g     O .data	00000038 isr_table_portA
+000092f8  w    F .text	00000020 HardwareSerial3::write(int)
+0000818c g     F .text	000000e0 FlexCAN::writeTxRegisters(CAN_message_t const&, unsigned char)
+0000a4e0 g     F .text	000000d0 serial2_end
+000096d0 g     F .text	000000c8 analog_init
+000027b8 g     F .text	000000e4 Prechargecon()
+0000b47c g     F .text	00000088 usb_tx
+0000cdbc g     F .text	00000136 .hidden __divsf3
+1fffd9a8 g     O .bss	00000004 outputcheck
+00009bb8  w    F .text	00000006 portcd_isr
+00008b2c g     F .text	00000034 ADC_Module::ADC_Module(unsigned char, unsigned char const*, ADC_Module::ADC_NLIST const*, ADC_settings::ADC_REGS_t&)
+000097d4 g     F .text	0000006c eeprom_initialize
+1fffdabc g     O .bss	00000004 x
+00009284  w    F .text	00000004 HardwareSerial3::clear()
+0000dc60 g     F .text	000000f8 memmove
+1fff8868 g     O .data	00000004 pwmcurmax
+1fffd8dc g     O .bss	00000004 lasttime
+00007aa0 g     F .text	0000001c Logger::console(char*, ...)
+0000090c g     F .text	00000054 BMSModule::getAvgTemp()
+1fffd9b8 g     O .bss	00000002 pwmcurmin
+0000e394 g     F .text	0000004c _Balloc
+1fffd90c g     O .bss	00000004 menuload
+00009bb8  w    F .text	00000006 can1_rx_warn_isr
+0001586c g       .fini	00000000 __exidx_end
+00000458 g     F .text	00000074 BMSModule::BMSModule()
+0000cfe0 g     F .text	0000004c .hidden __fixsfsi
+00009bb8  w    F .text	00000006 dma_error_isr
+1fffdcb8 g     O .bss	00000001 EventResponder::runningFromYield
+00009bb8  w    F .text	00000006 i2c0_isr
+1fffdacc g     O .bss	00000004 whichDisplay
+0000c8bc g     F .text	0000008a .hidden __gtdf2
+1fff9164 g     O .data	00000004 __atexit_recursive_mutex
+00008b2c g     F .text	00000034 ADC_Module::ADC_Module(unsigned char, unsigned char const*, ADC_Module::ADC_NLIST const*, ADC_settings::ADC_REGS_t&)
+00000a04 g     F .text	00000006 BMSModule::setTempOff(short)
+0000df38 g     F .text	0000000c __errno
+0000924c  w    F .text	00000018 HardwareSerial3::write(char const*)
+00009bb8  w    F .text	00000006 portd_isr
+00009bb8  w    F .text	00000006 enet_error_isr
+1fffdcb4 g     O .bss	00000004 EventResponder::firstInterrupt
+00000a0c g     F .text	00000068 BMSModuleManager::BMSModuleManager()
+1fffd8e4 g     O .bss	00000004 looptime1
+00009150  w    F .text	00000004 HardwareSerial2::end()
+1fffe068 g     O .bss	00000004 __stdio_exit_handler
+00009140  w    F .text	00000006 HardwareSerial2::setRX(unsigned char)
+00009bb8  w    F .text	00000006 tpm1_isr
+0000bd18  w    F .text	00000008 usb_serial_class::write(unsigned char const*, unsigned int)
+1fffd714 g     O .bss	00000002 chargecurrent
+000134c8 g     F .text	0000002c _fstat_r
+000152c8 g     O .text	00000110 digital_pin_to_info_PGM
+000007b0 g     F .text	00000006 BMSModule::getFaults()
+1fffe06c g     O .bss	00000004 errno
+1fffd9bc g     O .bss	000000e4 settings
+00004308 g     F .text	000001e8 sendcommand()
+0001586c g       .fini	00000000 _etext
+00008e78 g     F .text	00000010 _spi_dma_rxISR0()
+1fff9168 g       .bss	00000000 _sbss
+0000c958 g     F .text	00000010 .hidden __aeabi_cdcmple
+1fff91e0 g     O .bss	00000004 balancetimer
+1fffd71c g     O .bss	00000004 chargerendbulk
+1fffdab0 g     O .bss	00000004 voltage1
+0000ca44 g     F .text	00000160 .hidden __aeabi_fadd
+1fffd9a4 g     O .bss	00000001 nextmes
+0000ca40 g     F .text	00000164 .hidden __subsf3
+00000e80 g     F .text	00000004 BMSModuleManager::setBalIgnore(bool)
+0000a1fc g     F .text	0000001c digitalRead
+00009bb8  w    F .text	00000006 porte_isr
+1fff882c g     O .data	00000008 bmsmanu
+000065dc g     F .text	00000d88 loop
+00009bb8  w    F .text	00000006 portb_isr
+00007bfc g     F .text	00000078 FlexCAN::FlexCAN(unsigned char)
+00009bb8  w    F .text	00000006 spi1_isr
+000009fc g     F .text	00000006 BMSModule::setIgnoreCell(float)
+00009bb8  w    F .text	00000006 uart3_status_isr
+00009bb8  w    F .text	00000006 mcm_isr
+00009188  w    F .text	00000020 HardwareSerial2::write(int)
+000092f4  w    F .text	00000004 HardwareSerial3::availableForWrite()
+1fffdcb0 g     O .bss	00000004 EventResponder::lastInterrupt
+0000aadc g     F .text	00000184 uart1_status_isr
+0000a5e8 g     F .text	0000007c serial2_set_tx
+000099cc g     F .text	000001a6 memcpy
+00009bb8  w    F .text	00000006 randnum_isr
+0000aa94 g     F .text	00000048 serial2_clear
+0000c948 g     F .text	00000020 .hidden __aeabi_cdrcmple
+00000518 g     F .text	00000298 BMSModule::decodecan(int, CAN_message_t&, bool)
+1fff9168 g     O .data	00000000 .hidden __TMC_END__
+0000cfcc g     F .text	00000012 .hidden __aeabi_fcmpgt
+00000e7c g     F .text	00000004 BMSModuleManager::getPackVoltage()
+0000eb0c g     F .text	00001ba4 _svfprintf_r
+0000c7e8 g     F .text	00000022 .hidden __floatsidf
+00000e84 g     F .text	00000004 BMSModuleManager::setPstrings(int)
+0000788c g     F .text	00000002 CRC8::CRC8()
+1fff8978 g     O .data	00000030 isr_table_portC
+1fff8870 g     O .data	00000002 pwmfreq
+1fffdcc4 g     O .bss	00000004 systick_millis_count
+0000c8c4 g     F .text	00000082 .hidden __ltdf2
+00009b74  w    F .text	00000044 bus_fault_isr
+00004060 g     F .text	00000268 chargercomms()
+000092a8  w    F .text	00000008 HardwareSerial3::setTX(unsigned char, bool)
+00009bb8  w    F .text	00000006 watchdog_isr
+00009c24 g     F .text	00000044 nvic_execution_priority
+00009bb8  w    F .text	00000006 i2c1_isr
+1fffdebc g     O .bss	00000001 usb_configuration
+1fff91e4 g     O .bss	00004524 bms
+00007bf4 g     F .text	00000004 CANListener::frameHandler(CAN_message_t&, int, unsigned char)
+00009bb8  w    F .text	00000006 dma_ch11_isr
+000090c4  w    F .text	0000000c HardwareSerial2::write9bit(unsigned long)
+000091e8  w    F .text	00000020 HardwareSerial2::write(unsigned int)
+0000b384  w    F .text	00000002 serialEvent2()
+1fff8840 g     O .data	00000004 chargerid2
+00009bb8  w    F .text	00000006 i2c2_isr
+00009eb8 g     F .text	00000224 analogWrite
+1fff8a70  w    O .data	00000018 usb_string_manufacturer_name
+1fffdec0 g     O .bss	00000008 usb_rx_byte_count_data
+00009bb8  w    F .text	00000006 pit1_isr
+0000d06c g     F .text	00000010 malloc
+00009bb8  w    F .text	00000006 dma_ch4_isr
+00009bb8  w    F .text	00000006 software_isr
+0000a5b0 g     F .text	00000038 serial2_set_transmit_pin
+00008f54 g     F .text	00000068 FilterOnePole::input(float)
+00009c08  w    F .text	0000000a _fstat
+00009bb8  w    F .text	00000006 dma_ch7_isr
+0000178c g     F .text	00000128 alarmupdate()
+00008ec0 g     F .text	0000003c FilterOnePole::FilterOnePole(FILTER_TYPE, float, float)
+00010ab8 g     F .text	00000040 __assert_func
+00008d24  w    F .text	00000016 EventResponder::triggerEvent(int, void*)
+0000cbac g     F .text	0000001c .hidden __aeabi_i2f
+00015650 g     O .text	000000c8 __mprec_tens
+0000bc78 g     F .text	00000088 usb_init
+000008f0 g     F .text	0000001a BMSModule::getHighTemp()
+0000cefc g     F .text	00000066 .hidden __lesf2
+00003304 g     F .text	0000009c CAB500()
+0000aed8 g     F .text	0000006c serial3_end
+0000c9f8 g     F .text	00000040 .hidden __fixunsdfsi
+00009bb8  w    F .text	00000006 lptmr_isr
+00000fac g     F .text	00000052 BMSModuleManager::getAvgCellVolt()
+1fffdf2c g     O .bss	00000004 __malloc_top_pad
+00009dfc g     F .text	00000014 rtc_set
+1fffdad0 g     O .bss	0000019c Can0
+000092b8  w    F .text	00000006 HardwareSerial3::transmitterEnable(unsigned char)
+1fff9168 g       .bss	00000000 __bss_start__
+00008994 g     F .text	00000090 ADC_Module::setResolution(unsigned char)
+0000c7c8 g     F .text	0000001e .hidden __aeabi_ui2d
+000012f4 g     F .text	0000023c BMSModuleManager::printAllCSV(unsigned long, float, int)
+000108ec g     F .text	00000008 _localeconv_r
+0000a444 g     F .text	0000009c serial2_format
+000004cc g     F .text	0000004c BMSModule::decodetemp(CAN_message_t&, int)
+00012d5c g     F .text	000002e8 __sfvwrite_r
+0000e534 g     F .text	0000005c __i2b
+000151c8 g     O .text	00000068 vtable for HardwareSerial2
+0000b108 g     F .text	0000008c serial3_getchar
+1fff8720 g       .data	00000000 _sdata
+0000c544 g     F .text	00000000 .hidden __aeabi_drsub
+0000c2a4 g     F .text	00000010 finitef
+0000dee8 g     F .text	00000024 _sbrk_r
+000007d0 g     F .text	0000000c BMSModule::getCellVoltage(int)
+00009298  w    F .text	00000010 HardwareSerial3::attachRts(unsigned char)
+000001bc g     F .text	000001c8 ResetHandler
+0000ac98 g     F .text	00000020 serial2_add_memory_for_write
+1fffdaa0 g     O .bss	00000004 storagemode
+0000bdb8 g     F .text	00000048 usb_serial_getchar
+00009bb8  w    F .text	00000006 can1_bus_off_isr
+000036d4 g     F .text	000004e0 currentlimit()
+00007e74 g     F .text	00000062 FlexCAN::setMask(unsigned long, unsigned char)
+00009bb8  w    F .text	00000006 ftm2_isr
+1fffded8 g     O .bss	00000008 usb_cdc_line_coding
+00007890 g     F .text	00000036 CRC8::begin()
+0000a1b0 g     F .text	0000004c digitalWrite
+00009bb8  w    F .text	00000006 uart5_status_isr
+00009bb8  w    F .text	00000006 lpuart0_status_isr
+1fffdcbc g     O .bss	00000004 EventResponder::lastYield
+000150f4 g     O .text	0000002c ADC::channel2sc1aADC0
+000008d4 g     F .text	0000001a BMSModule::getLowTemp()
+0000debc g     F .text	0000002c _read_r
+00015454 g     O .text	00000004 usb_endpoint_config_table
+00009bb8  w    F .text	00000006 dma_ch9_isr
+1fffd914 g     O .bss	00000010 msg
+00009bb8  w    F .text	00000006 pit2_isr
+0000a368 g     F .text	000000dc serial2_begin
+0000c97c g     F .text	00000012 .hidden __aeabi_dcmplt
+0000b0e0 g     F .text	00000028 serial3_available
+000106b0 g     F .text	000000c6 _fclose_r
+1fffdf24 g     O .bss	00000004 __malloc_max_sbrked_mem
+00009114  w    F .text	00000004 HardwareSerial2::clear()
+0000a218 g     F .text	00000078 pinMode
+1fffd8d8 g     O .bss	00000004 lastUpdate
+0000bd68 g     F .text	00000050 usb_free
+00009450 g     F .text	000001c0 Print::printFloat(double, unsigned char)
+00009bb8  w    F .text	00000006 i2c3_isr
+0000c80c g     F .text	00000042 .hidden __extendsfdf2
+1fffd924 g     O .bss	00000080 msgString
+0001376c g     F .text	000001d0 .hidden __aeabi_ddiv
+1fffd7a0 g     O .bss	00000100 crc8
+1fffd8e8 g     O .bss	00000020 lowpassFilter
+1fff8848 g     O .data	00000004 debug
+0000c550 g     F .text	00000276 .hidden __adddf3
+0000cf04 g     F .text	0000005e .hidden __nesf2
+0000a744 g     F .text	000000f8 serial2_putchar
+00000c58 g     F .text	00000188 BMSModuleManager::getAllVoltTemp()
+0000917c  w    F .text	00000004 HardwareSerial2::available()
+0000a9bc g     F .text	0000008c serial2_getchar
+0001586c g       .fini	00000000 __exidx_start
+00013518 g     F .text	00000254 .hidden __aeabi_dmul
+00009bb8  w    F .text	00000006 pit0_isr
+00009264  w    F .text	00000010 HardwareSerial3::write(unsigned char const*, unsigned int)
+00009c14  w    F .text	00000004 _isatty
+1fffdcac g     O .bss	00000004 EventResponder::firstYield
+00008a24 g     F .text	00000108 ADC_Module::analog_init()
+1fff8878 g     O .data	00000001 Logger::logLevel
+1fffd8bc g     O .bss	00000010 inMsg
+00009318  w    F .text	00000020 HardwareSerial3::write(unsigned long)
+00009bb8  w    F .text	00000006 can1_error_isr
+0000d5f4 g     F .text	000003d8 _realloc_r
+000009e4 g     F .text	00000006 BMSModule::settempsensor(int)
+0000df44 g     F .text	00000048 __libc_init_array
+1fffe210 g       .bss	00000000 __bss_end
+00008648 g     F .text	00000002 can0_wakeup_isr
+1fffd718 g     O .bss	00000004 chargerend
+000090dc  w    F .text	00000018 HardwareSerial2::write(char const*)
+00009bb8  w    F .text	00000006 flash_cmd_isr
+000090f4  w    F .text	00000010 HardwareSerial2::write(unsigned char const*, unsigned int)
+0000ada4 g     F .text	00000098 serial3_begin
+000131bc g     F .text	00000066 _fputwc_r
+00015628 g     O .text	00000028 __mprec_bigtens
+00009c20  w    F .text	00000002 abort
+0000bd00  w    F .text	00000004 usb_serial_class::clear()
+0000c7c8 g     F .text	0000001e .hidden __floatunsidf
+0000b204 g     F .text	00000128 uart2_status_isr
+00009bd0  w    F .text	0000002c _sbrk
+0000e89c g     F .text	0000003e __mcmp
+000009dc g     F .text	00000006 BMSModule::isReset()
+00009d14 g     F .text	000000e8 attachInterrupt
+1fff88e8 g     O .data	00000004 __brkval
+1fffdee0 g     O .bss	00000001 usb_cdc_line_rtsdtr
+0000c058 g     F .text	00000048 usb_serial_flush_callback
+00003d2c g     F .text	00000334 dashupdate()
+1fffd798 g     O .bss	00000004 conttimer2
+00009154  w    F .text	00000020 HardwareSerial2::begin(unsigned long, unsigned long)
+00015848 g     F .text	00000000 _init
+1fff91d0 g     O .bss	00000004 alarm
+0000c2b4 g     F .text	00000244 __ieee754_expf
+1fffd708 g     O .bss	00000001 bmsstatus
+0000b070 g     F .text	00000028 serial3_write
+00009274  w    F .text	00000008 HardwareSerial3::addMemoryForWrite(void*, unsigned int)
+00009bb8  w    F .text	00000006 svcall_isr
+00009874 g     F .text	0000004c eeprom_write_byte
+00009bb8  w    F .text	00000006 dma_ch15_isr
+00007b78 g     F .text	00000028 Logger::info(char*, ...)
+1fffd716 g     O .bss	00000001 chargecurrentlimit
+00000fa4 g     F .text	00000004 BMSModuleManager::getHighTemperature()
+0000ca40 g     F .text	00000164 .hidden __aeabi_fsub
+000078f8 g     F .text	0000000c Logger::setLoglevel(Logger::LogLevel)
+00009bb8  w    F .text	00000006 uart1_error_isr
+000108f4 g     F .text	00000028 __libc_fini_array
+0000a0dc g     F .text	000000d4 analogWriteFrequency
+00009bb8  w    F .text	00000006 usbhs_phy_isr
+1fffd908 g     O .bss	00000004 mainconttimer
+1fffe210 g       .bss	00000000 _ebss
+1fff88d0 g     O .data	00000014 Serial3
+00007da4 g     F .text	00000084 FlexCAN::setFilter(CAN_filter_t const&, unsigned char)
+1fff8854 g     O .data	00000004 firmver
+1fffd910 g     O .bss	00000001 mescycle
+000092c0  w    F .text	00000004 HardwareSerial3::end()
+1fffd72c g     O .bss	00000060 console
+0000e494 g     F .text	00000040 __hi0bits
+00008658 g     F .text	0000005c ADC::ADC()
+0000cfb8 g     F .text	00000012 .hidden __aeabi_fcmpge
+0001393c g     F .text	0000004e .hidden __fixdfsi
+0000910c  w    F .text	00000008 HardwareSerial2::addMemoryForRead(void*, unsigned int)
+00009bb8 g     F .text	00000006 unused_isr
+1fff9190 g     O .bss	00000008 DMC
+00009288  w    F .text	00000010 HardwareSerial3::attachCts(unsigned char)
+000042c8 g     F .text	00000040 getcheck(CAN_message_t&, int)
+00009bb8  w    F .text	00000006 spi0_isr
+0000b32c g     F .text	00000038 serial3_add_memory_for_read
+1fffe074 g     O .bss	00000001 __lock___malloc_recursive_mutex
+000092e8  w    F .text	00000004 HardwareSerial3::read()
+0000cbd8 g     F .text	0000007c .hidden __floatdisf
+00009bb8  w    F .text	00000006 dma_ch3_isr
+1fff9184 g     O .bss	00000001 CPdebug
+1fffd78c g     O .bss	00000004 contctrl
+1fffdf30 g     O .bss	00000138 __sf
+000033a0 g     F .text	00000334 canread()
+0000cef4 g     F .text	0000006e .hidden __gtsf2
+1fff91c0 g     O .bss	00000001 Unassigned
+00009bb8  w    F .text	00000006 flash_error_isr
+0000c550 g     F .text	00000276 .hidden __aeabi_dadd
+1fff91c8 g     O .bss	00000002 accurlim
+0000c8c4 g     F .text	00000082 .hidden __ledf2
+000008cc g     F .text	00000006 BMSModule::getbalstat()
+0000cfa4 g     F .text	00000012 .hidden __aeabi_fcmple
+00009bb8  w    F .text	00000006 uart5_error_isr
+00009bb8  w    F .text	00000006 rtc_seconds_isr
+0001514c g     O .text	00000078 SPIClass::spi0_hardware
+00009bb8  w    F .text	00000006 pdb_isr
+0000e6ec g     F .text	000000c0 __pow5mult
+0000c850 g     F .text	0000006a .hidden __aeabi_ul2d
+00009b74  w    F .text	00000044 usage_fault_isr
+00009bb8  w    F .text	00000006 dac1_isr
+00000000 g     O .text	000001bc _VectorsFlash
+00009bb8  w    F .text	00000006 dma_ch14_isr
+1fffd8e0 g     O .bss	00000004 looptime
+1fffd8d4 g     O .bss	00000004 inputcheck
+1fffdee4 g     O .bss	00000004 usb_cdc_line_rtsdtr_millis
+0000c190 g     F .text	00000050 HardwareSerial::addToSerialEventsList()
+00009088 g     F .text	00000010 systick_isr
+0000b098 g     F .text	00000018 serial3_flush
+00009bb8  w    F .text	00000006 rtc_alarm_isr
+0000df98 g     F .text	00000002 __retarget_lock_release_recursive
+00009128  w    F .text	00000010 HardwareSerial2::attachRts(unsigned char)
+00009bb8  w    F .text	00000006 dma_ch2_isr
+1fff89fc g     O .data	00000010 Serial
+1fff8850 g     O .data	00000004 filterFrequency
+00009bb8  w    F .text	00000006 ftm1_isr
+0000c534 g     F .text	00000008 .hidden __math_uflowf
+0000bd20  w    F .text	00000006 usb_serial_class::write(unsigned char)
+0000af44 g     F .text	00000038 serial3_set_transmit_pin
+00009bc0  w    F .text	0000000c startup_early_hook
+00009bb8  w    F .text	00000006 dma_ch13_isr
+1fffdac0 g     O .bss	00000004 Logger::lastLogTime
+00009180  w    F .text	00000004 HardwareSerial2::flush()
+1fff9180 g     O .bss	00000004 CANmilliamps
+00009bb8  w    F .text	00000006 uart2_error_isr
+0000be00 g     F .text	00000030 usb_serial_peekchar
+0000c9b8 g     F .text	00000012 .hidden __aeabi_dcmpgt
+1fff8858 g     O .data	00000004 maxac1
+0000b364 g     F .text	00000020 serial3_add_memory_for_write
+0000db34 g     F .text	0000000c __sfp_lock_acquire
+00010920 g     F .text	00000000 memchr
+0000afd4 g     F .text	00000002 serial3_set_rx
+1fffe210 g       .bss	00000000 __bss_end__
+1fff8aa0 g     O .data	00000016 usb_string_serial_number_default
+00009b74 g     F .text	00000044 fault_isr
+0000e15c g     F .text	0000020c _free_r
+0000de60 g     F .text	0000000c __locale_mb_cur_max
+00011b9c g     F .text	0000001a _wcsrtombs_r
+0000c9a4 g     F .text	00000012 .hidden __aeabi_dcmpge
+00009bb8  w    F .text	00000006 usb_charge_isr
+1fffd728 g     O .bss	00000004 commandtime
+1fffe080 g     O .bss	00000190 __atexit0
+0000bd10  w    F .text	00000004 usb_serial_class::flush()
+1fff91ac g     O .bss	00000004 Pretimer1
+00009bb8  w    F .text	00000006 cmt_isr
+0000c54c g     F .text	0000027a .hidden __aeabi_dsub
+00009bb8  w    F .text	00000006 usbhs_isr
+00008ec0 g     F .text	0000003c FilterOnePole::FilterOnePole(FILTER_TYPE, float, float)
+1fff8ec0 g     O .data	00000004 __malloc_sbrk_base
+1fffd8ac g     O .bss	00000002 duration
+0000bd08  w    F .text	00000004 usb_serial_class::read()
+00009bb8  w    F .text	00000006 ftm3_isr
+1fff9198 g     O .bss	00000004 Discharge
+00003bb4 g     F .text	000000cc inputdebug()
+000009cc g     F .text	00000006 BMSModule::getError()
+00009bb8  w    F .text	00000006 tsi0_isr
+0000c850 g     F .text	0000006a .hidden __floatundidf
+00009c18  w    F .text	00000006 _lseek
+0000e7ac g     F .text	000000f0 __lshift
+00009bb8  w    F .text	00000006 spi2_isr
+1fff8834 g     O .data	00000008 bmsname
+0000cbac g     F .text	0000001c .hidden __floatsisf
+00011be0 g     F .text	00000100 __ssprint_r
+0000c1e0  w    F .text	00000002 serialEvent()
+1fffdebd g     O .bss	00000001 usb_reboot_timer
+00010a30 g     F .text	00000088 __register_exitproc
+00008c7c g     F .text	00000018 ADC_Module::checkPin(unsigned char)
+00009840 g     F .text	00000034 eeprom_read_byte
+1fffdab4 g     O .bss	00000004 voltage2
+1fffd720 g     O .bss	00000002 chargerpower
+0000be5c g     F .text	00000038 usb_serial_flush_input
+1fffd8b0 g     O .bss	00000008 filter
+0000e590 g     F .text	0000015c __multiply
+1fff89c8 g     O .data	00000008 isr_table_portE
+0000bf9c g     F .text	0000001a usb_serial_putchar
+00000021 g       *ABS*	00000000 _teensy_model_identifier
+1fffdaa6 g     O .bss	00000001 testcycle
+1fff91cc g     O .bss	00000004 adc
+0000cfe0 g     F .text	0000004c .hidden __aeabi_f2iz
+0000ddfc g     F .text	00000064 strncpy
+1fffdefc g     O .bss	00000028 __malloc_current_mallinfo
+1fff91b0 g     O .bss	00000004 RawCur
+1fff91a0 g     O .bss	00000001 NextID
+0000cf04 g     F .text	0000005e .hidden __eqsf2
+0000ea30 g     F .text	000000c0 __d2b
+1fffdeec g     O .bss	0000000c HardwareSerial::s_serials_with_serial_events
+00008630 g     F .text	00000002 can0_bus_off_isr
+0000a83c g     F .text	00000110 serial2_write
+000007b8 g     F .text	00000006 BMSModule::getAlerts()
+000090d0  w    F .text	0000000c HardwareSerial2::write(unsigned char)
+000091a8  w    F .text	00000020 HardwareSerial2::write(unsigned long)
+00000a74 g     F .text	0000003e BMSModuleManager::checkcomms()
+0000a964 g     F .text	00000030 serial2_write_buffer_free
+1fffdec8 g     O .bss	00000001 usb_rx_memory_needed
+0000b504 g     F .text	00000774 usb_isr
+1fff91a8 g     O .bss	00000004 Pretimer
+0000cdbc g     F .text	00000136 .hidden __aeabi_fdiv
+0000de6c g     F .text	00000024 _close_r
+0000c7e8 g     F .text	00000022 .hidden __aeabi_i2d
+000096c8 g     F .text	00000006 Stream::parseInt()
+00007ba0 g     F .text	00000028 Logger::error(char*, ...)
+0000289c g     F .text	000001f4 contcon()
+1fffdc74 g     O .bss	00000038 SPI
+00007bfc g     F .text	00000078 FlexCAN::FlexCAN(unsigned char)
+1fff89fa g     O .data	00000001 _serialEvent3_default
+000153d8  w    O .text	00000028 vtable for usb_serial_class
+00009bb8  w    F .text	00000006 uart3_error_isr
+00002c10 g     F .text	00000670 VEcan()
+0000df90 g     F .text	00000002 __retarget_lock_close_recursive
+000150f0 g     O .text	00000004 ADC::diff_table_ADC1
+1fffd9b0 g     O .bss	00000004 overtriptimer
+0000cbc8 g     F .text	0000008c .hidden __floatundisf
+00009610 g     F .text	00000040 Stream::timedPeek()
+000007c0 g     F .text	00000006 BMSModule::getCOVCells()
+00013044 g     F .text	000000cc __swsetup_r
+00009bb8  w    F .text	00000006 porta_isr
+1fffd8d0 g     O .bss	00000004 incomingByte
+0001376c g     F .text	000001d0 .hidden __divdf3
+1fff83bc g     O .usbbuffers	00000360 usb_buffer_memory
+00007364 g     F .text	00000038 low_voltage_isr
+1fff8ab8 g     O .data	00000408 __malloc_av_
+0000cba4 g     F .text	00000024 .hidden __aeabi_ui2f
+1fffe07c g     O .bss	00000004 __atexit
+00008634 g     F .text	0000000c can0_error_isr
+00009e14 g     F .text	000000a4 _init_Teensyduino_internal_
+1fff91b4 g     O .bss	00000004 SOCmem
+00013518 g     F .text	00000254 .hidden __muldf3
+0000dbd4 g     F .text	00000022 __sread
+0000b1e0 g     F .text	00000024 serial3_clear
+0000251c g     F .text	0000029c updateSOC()
+0000c000 g     F .text	00000058 usb_serial_flush_output
+00009bb8  w    F .text	00000006 dma_ch12_isr
+0000d5dc g     F .text	0000000c __malloc_lock
+00009bb8  w    F .text	00000006 can1_wakeup_isr
+00000fa8 g     F .text	00000004 BMSModuleManager::getLowTemperature()
+1fff8200 g     O .dmabuffers	000001bc _VectorsRam
+00010898 g     F .text	00000054 _fflush_r
+00010af8 g     F .text	00000078 _calloc_r
+00009098 g     F .text	0000002c HardwareSerial2::begin(unsigned long)
+00009bb8  w    F .text	00000006 pit3_isr
+0000cf04 g     F .text	0000005e .hidden __cmpsf2
+1fff8a10 g     O .data	00000001 yield_active_check_flags
+00009bb8  w    F .text	00000006 enet_rx_isr
+0000df94 g     F .text	00000002 __retarget_lock_acquire_recursive
+00009bb8  w    F .text	00000006 portc_isr
+0000dd58 g     F .text	000000a4 memset
+000099bc g     F .text	00000010 main
+1fffdf28 g     O .bss	00000004 __malloc_max_total_mem
+0000df8c g     F .text	00000002 __retarget_lock_init_recursive
+0000aa48 g     F .text	0000004c serial2_peek
+0000cbd8 g     F .text	0000007c .hidden __aeabi_l2f
+0000a6c0 g     F .text	00000044 serial2_set_rts
+00007c74 g     F .text	000000c8 FlexCAN::setBaudRate(unsigned long)
+0000cefc g     F .text	00000066 .hidden __ltsf2
+00009b74  w    F .text	00000044 memmanage_fault_isr
+0000b01c g     F .text	00000040 serial3_set_cts
+0000dc58 g     F .text	00000008 __sclose
+0000c1e4 g     F .text	00000070 usb_init_serialnumber
+00015868 g       .text	00000000 __init_array_end
+000080f4 g     F .text	00000096 FlexCAN::read(CAN_message_t&)
+00010c98 g     F .text	00000eb8 _dtoa_r
+0000d07c g     F .text	00000560 _malloc_r
+1fffdef8 g     O .bss	00000001 HardwareSerial::s_count_serials_with_serial_events
+00009bb8  w    F .text	00000006 debugmonitor_isr
+0000eaf0 g     F .text	0000001a __ascii_wctomb
+0000c860 g     F .text	0000005a .hidden __aeabi_l2d
+1fff89a8 g     O .data	00000020 isr_table_portD
+0000a704 g     F .text	00000040 serial2_set_cts
+00008fbc g     F .text	00000084 EventResponder::triggerEventNotImmediate()
+00000ab4 g     F .text	00000036 BMSModuleManager::checkstatus()
+00009234  w    F .text	0000000c HardwareSerial3::write9bit(unsigned long)
+645c22f7 g       *ABS*	00000000 __rtc_localtime
+0000a290 g     F .text	00000040 micros
+1fff91a4 g     O .bss	00000004 OverTime
+1fff919c g     O .bss	00000004 ErrorReason
+0000cbc8 g     F .text	0000008c .hidden __aeabi_ul2f
+00009bb8  w    F .text	00000006 cmp1_isr
+00009bb8  w    F .text	00000006 ftm0_isr
+00009118  w    F .text	00000010 HardwareSerial2::attachCts(unsigned char)
+0000cf6c g     F .text	00000010 .hidden __aeabi_cfcmple
+1fffd79c g     O .bss	00000004 conttimer3
+0000e0bc g     F .text	000000a0 _malloc_trim_r
+00013224 g     F .text	000000f8 _wcsnrtombs_l
+1fff8a6c g     O .data	00000004 string0
+0000be94 g     F .text	00000108 usb_serial_write
+0000cc54 g     F .text	00000168 .hidden __mulsf3
+00009bcc  w    F .text	00000002 startup_late_hook
+000092e4  w    F .text	00000004 HardwareSerial3::peek()
+00008efc g     F .text	00000058 FilterOnePole::output()
+0000bd0c  w    F .text	00000004 usb_serial_class::available()
+00009358  w    F .text	00000020 HardwareSerial3::write(unsigned int)
+000151c4  w    O .text	00000001 _serialEvent_default
+000008c4 g     F .text	00000006 BMSModule::getscells()
+0000b0b0 g     F .text	00000030 serial3_write_buffer_free
+00000b88 g     F .text	000000d0 BMSModuleManager::decodecan(CAN_message_t&, int)
+000092c4  w    F .text	00000020 HardwareSerial3::begin(unsigned long, unsigned long)
+00009338  w    F .text	00000020 HardwareSerial3::write(long)
+1fff8a88  w    O .data	00000016 usb_string_product_name
+0000a2d0 g     F .text	00000098 delay
+1fff8844 g     O .data	00000002 commandrate
+0000c8cc g     F .text	0000007a .hidden __nedf2
+00009bb8  w    F .text	00000006 tpm0_isr
+00008cd0 g     F .text	00000054 ADC_Module::startContinuous(unsigned char)
+00015868 g     F .fini	00000000 _fini
+1fff9188 g     O .bss	00000004 CSVdebug
+00003280 g     F .text	00000084 CAB300()
+000150ec g     O .text	00000004 ADC::diff_table_ADC0
+00000de0 g     F .text	00000050 BMSModuleManager::getLowCellVolt()
+0000db94 g     F .text	00000040 sprintf
+00009bb8  w    F .text	00000006 i2s0_rx_isr
+00009bb8  w    F .text	00000006 uart4_error_isr
+000093fc g     F .text	00000010 Print::print(long)
+0000e0b0 g     F .text	0000000c atexit
+00008658 g     F .text	0000005c ADC::ADC()
+0000cef4 g     F .text	0000006e .hidden __gesf2
+0001331c g     F .text	00000024 _wcsnrtombs_r
+0000df0c g     F .text	0000002c _write_r
+0000ca38 g     F .text	0000016c .hidden __aeabi_frsub
+00000ed4 g     F .text	000000d0 BMSModuleManager::getAvgTemperature()
+1fffd8a8 g     O .bss	00000004 discurrent
+00008624 g     F .text	0000000c can0_message_isr
+00000e88 g     F .text	0000004c BMSModuleManager::setSensors(int, float, int)
+1fff9160 g     O .data	00000004 _impure_ptr
+00009bb8  w    F .text	00000006 can1_message_isr
+0000cf7c g     F .text	00000012 .hidden __aeabi_fcmpeq
+00010778 g     F .text	0000011e __sflush_r
+00009bb8  w    F .text	00000006 nmi_isr
+00000960 g     F .text	00000050 BMSModule::getModuleVoltage()
+000044f0 g     F .text	0000007c resetIDdebug()
+00009174  w    F .text	00000004 HardwareSerial2::peek()
+0000cc54 g     F .text	00000168 .hidden __aeabi_fmul
+000009c0 g     F .text	0000000a BMSModule::setAddress(int)
+0000db4c g     F .text	00000046 _fwalk_sglue
+00015854 g       .text	00000000 __preinit_array_end
+000088a8 g     F .text	000000ec ADC_Module::wait_for_cal()
+0000cf64 g     F .text	00000018 .hidden __aeabi_cfrcmple
+00009104  w    F .text	00000008 HardwareSerial2::addMemoryForWrite(void*, unsigned int)
+00009bb8  w    F .text	00000006 sdhc_isr
+00015230 g     O .text	00000068 vtable for HardwareSerial3
+000092f0  w    F .text	00000004 HardwareSerial3::flush()
+00000818 g     F .text	0000004c BMSModule::getHighCellV()
+000009d4 g     F .text	00000006 BMSModule::isExisting()
+00000864 g     F .text	00000060 BMSModule::getAverageV()
+0000e368 g     F .text	0000002a __ascii_mbtowc
+00008b60 g     F .text	000000a8 ADC_Module::setSamplingSpeed(ADC_settings::ADC_SAMPLING_SPEED)
+00001000 g     F .text	000002f4 BMSModuleManager::printPackDetails(int, int)
+1fffdaa4 g     O .bss	00000002 tempchargecurrent
+000073ec g     F .text	000004a0 setup
+00015400 g     O .text	00000054 usb_descriptor_list
+0000b38c g     F .text	00000044 usb_rx
+000007dc g     F .text	0000003c BMSModule::getLowCellV()
+00008c94 g     F .text	0000003c ADC_Module::startReadFast(unsigned char)
+00009bb8  w    F .text	00000006 dma_ch10_isr
+00007904 g     F .text	0000019c Logger::logMessage(char*, std::__va_list)
+1fffd8a4 g     O .bss	00000004 debugCur
+0000c9f8 g     F .text	00000040 .hidden __aeabi_d2uiz
+00009bb8  w    F .text	00000006 uart0_error_isr
+1fff8874 g     O .data	00000004 sensor
+000083f0 g     F .text	00000234 FlexCAN::message_isr()
+1fff91c4 g     O .bss	00000004 UnderTime
+0000bd28 g     F .text	00000040 usb_malloc
+00000458 g     F .text	00000074 BMSModule::BMSModule()
+0000cf90 g     F .text	00000012 .hidden __aeabi_fcmplt
+00009bb8  w    F .text	00000006 i2s0_isr
+1fffdab8 g     O .bss	00000004 warning
+20008000 g       .bss	00000000 _estack
+0000bfb8 g     F .text	00000048 usb_serial_write_buffer_free
+00009bb8  w    F .text	00000006 enet_timer_isr
+000086b4 g     F .text	000000aa ADC::startContinuous(unsigned char, signed char)
+0000c968 g     F .text	00000012 .hidden __aeabi_dcmpeq
+1fff8ec8 g     O .data	0000000c __sglue
+00009428  w    F .text	00000014 _write
+1fff9168 g       .data	00000000 _edata
+1fffd710 g     O .bss	00000004 cellspresent
+00009bb8  w    F .text	00000006 i2s0_tx_isr
+00009bb8  w    F .text	00000006 adc1_isr
+0000788c g     F .text	00000002 CRC8::CRC8()
+00007ed8 g     F .text	000001b8 FlexCAN::begin(unsigned long, CAN_filter_t const&, unsigned char, unsigned char)
+00013110 g     F .text	000000ac __fputwc
+0000bd14  w    F .text	00000004 usb_serial_class::availableForWrite()
+1fffdac8 g     O .bss	00000001 printPrettyDisplay
+00009bb8  w    F .text	00000006 cmp0_isr
+00015120 g     O .text	0000002c ADC::channel2sc1aADC1
+00007abc g     F .text	00000098 Logger::log(Logger::LogLevel, char*, std::__va_list)
+1fff886c g     O .data	00000004 pwmcurmid
+00007d3c g     F .text	00000066 FlexCAN::setNumTxBoxes(unsigned char)
+00009c70 g     F .text	0000005c ultoa
+0000d02c g     F .text	0000003e .hidden __aeabi_f2uiz
+000009f4 g     F .text	00000006 BMSModule::setReset(bool)
+1fff885c g     O .data	00000004 maxac2
+0000a664 g     F .text	0000005c serial2_set_rx
+0000dbf8 g     F .text	0000003e __swrite
+00009c68 g     F .text	00000004 operator new(unsigned int)
+00009040 g     F .text	00000044 EventResponder::runFromInterrupt()
+1fff8ec4 g     O .data	00000004 __malloc_trim_threshold
+0000bd04  w    F .text	00000004 usb_serial_class::peek()
+000009b0 g     F .text	00000010 BMSModule::getTemperature(int)
+1fff8860 g     O .data	00000004 ncharger
+00011bb8 g     F .text	00000028 fiprintf
+00011d58 g     F .text	00000f84 _vfiprintf_r
+0000cba4 g     F .text	00000024 .hidden __floatunsisf
+1fff91dc g     O .bss	00000001 balancepauze
+0000e8dc g     F .text	00000154 __mdiff
+00000b34 g     F .text	0000000a BMSModuleManager::getNumModules()
+0001393c g     F .text	0000004e .hidden __aeabi_d2iz
+00007bc8 g     F .text	0000002c SerialConsole::SerialConsole()
+00009178  w    F .text	00000004 HardwareSerial2::read()
+1fffdee8 g     O .bss	00000001 usb_cdc_transmit_flush_timer
+1fffdaa8 g     O .bss	00000004 undertriptimer
+1fff9040 g     O .data	00000120 _impure_data
+0000cf6c g     F .text	00000010 .hidden __aeabi_cfcmpeq
+0000afd8 g     F .text	00000044 serial3_set_rts
+000018b4 g     F .text	0000017c gaugeupdate()
+00009bb8  w    F .text	00000006 pit_isr
+0000db40 g     F .text	0000000c __sfp_lock_release
+1fffd8b8 g     O .bss	00000004 gaugedebug
+1fff89f9 g     O .data	00000001 _serialEvent2_default
+00009798 g     F .text	0000003c analogWriteDAC0
+00007b54 g     F .text	00000024 Logger::debug(char*, ...)
+00007bf8 g     F .text	00000002 CANListener::txHandler(int, unsigned char)
+00015470 g     O .text	00000101 _ctype_
+00009bb8  w    F .text	00000006 dac0_isr
+0000a94c g     F .text	00000018 serial2_flush
+1fffd70c g     O .bss	00000004 candebug
+00009bfc  w    F .text	00000004 _read
+00015854 g       .text	00000000 __init_array_start
+00009bb8  w    F .text	00000006 can1_tx_warn_isr
+1fffdc6c g     O .bss	00000008 FlexCAN::defaultMask
+0000c9cc g     F .text	0000002c .hidden __unorddf2
+000009ec g     F .text	00000006 BMSModule::setExists(bool)
+0000d02c g     F .text	0000003e .hidden __fixunssfsi
+1fff887c g     O .data	0000003f bitTimingTable
+1fff91bc g     O .bss	00000004 SOCtest
+00009148  w    F .text	00000006 HardwareSerial2::transmitterEnable(unsigned char)
+00009bb8  w    F .text	00000006 uart0_status_isr
+00009bb8  w    F .text	00000006 mcg_isr
+0000c254 g     F .text	00000050 expf
+0000b194 g     F .text	0000004c serial3_peek
+00008764 g     F .text	00000142 ADC_Module::setConversionSpeed(ADC_settings::ADC_CONVERSION_SPEED)
+1fff8864 g     O .data	00000004 pulltime
+00009650 g     F .text	00000076 Stream::parseInt(char)
+0000ac60 g     F .text	00000038 serial2_add_memory_for_read
+00001f20 g     F .text	000005fc getcurrent()
+00000400 g     O .text	00000010 flashconfigbytes
+00000b40 g     F .text	00000048 BMSModuleManager::decodetemp(CAN_message_t&, int, int)
+00013340 g     F .text	000000d8 __smakebuf_r
+0000c53c g     F .text	00000008 .hidden __math_oflowf
+00007e28 g     F .text	0000004a FlexCAN::getFilter(CAN_filter_t&, unsigned char)
+0000dfc0 g     F .text	000000dc strlen
+0000c958 g     F .text	00000010 .hidden __aeabi_cdcmpeq
+0000c8bc g     F .text	0000008a .hidden __gedf2
+1fff8a88 g     O .data	00000016 usb_string_product_name_default
+1fff91d4 g     O .bss	00000004 ampsecond
+1fffd790 g     O .bss	00000004 contstat
+1fff884c g     O .data	00000004 debugdigits
+00009bb8  w    F .text	00000006 dma_ch1_isr
+1fff91b8 g     O .bss	00000004 SOCset
+00000a0c g     F .text	00000068 BMSModuleManager::BMSModuleManager()
+0000b3d0 g     F .text	0000002c usb_tx_packet_count
+000091c8  w    F .text	00000020 HardwareSerial2::write(long)
+00008090 g     F .text	00000064 FlexCAN::available()
+1fffd8cc g     O .bss	00000004 inbox
+00009e10  w    F .text	00000002 startup_middle_hook
+0000c80c g     F .text	00000042 .hidden __aeabi_f2d
+00009bb8  w    F .text	00000006 dma_ch5_isr
+1fff883c g     O .data	00000004 chargerid1
+00008644 g     F .text	00000002 can0_rx_warn_isr
+000098c0 g     F .text	000000fc eeprom_write_block
+00001530 g     F .text	0000005c isrCP()
+000092ec  w    F .text	00000004 HardwareSerial3::available()
+00008640 g     F .text	00000002 can0_tx_warn_isr
+00009bb8  w    F .text	00000006 uart4_status_isr
+1fff91d8 g     O .bss	00000004 balancecells
+0000c54c g     F .text	0000027a .hidden __subdf3
+00015854 g       .text	00000000 __preinit_array_start
+00007bc8 g     F .text	0000002c SerialConsole::SerialConsole()
+00008354 g     F .text	0000009a FlexCAN::readRxRegisters(CAN_message_t&, unsigned char)
+0000e4d4 g     F .text	0000005e __lo0bits
+0000927c  w    F .text	00000008 HardwareSerial3::addMemoryForRead(void*, unsigned int)
+00001a30 g     F .text	000004f0 printbmsstat()
+00000e30 g     F .text	0000004a BMSModuleManager::getHighCellVolt()
+1fffd9ac g     O .bss	00000004 outputstate
+0000af7c g     F .text	00000058 serial3_set_tx
+0000b388  w    F .text	00000002 serialEvent3()
+1fffd8a0 g     O .bss	00000004 currentact
+000078c8 g     F .text	00000030 CRC8::get_crc8(unsigned char const*, int, unsigned char)
+000109c0 g     F .text	00000070 frexp
+00009bb8  w    F .text	00000006 cmp2_isr
+0000ca44 g     F .text	00000160 .hidden __addsf3
+00009084 g     F .text	00000004 pendablesrvreq_isr
+00009184  w    F .text	00000004 HardwareSerial2::availableForWrite()
+1fff8ed4 g     O .data	0000016c __global_locale
+1fff8928 g     O .data	00000050 isr_table_portB
+00009bb8  w    F .text	00000006 wakeup_isr
+000092b0  w    F .text	00000006 HardwareSerial3::setRX(unsigned char)
+1fffe078 g     O .bss	00000001 __lock___sfp_recursive_mutex
+00009bb8  w    F .text	00000006 cmp3_isr
+0000943c g     F .text	00000014 Print::printNumber(unsigned long, unsigned char, unsigned char)
+0000ae3c g     F .text	0000009c serial3_format
+1fff8828 g     O .data	00000002 SOH
+00009c00  w    F .text	00000006 _close
+1fff8824 g     O .data	00000004 SOC
+00009bb8  w    F .text	00000006 tpm2_isr
+0000e3f4 g     F .text	000000a0 __multadd
+1fffdaac g     O .bss	00000004 value
+0000e3e0 g     F .text	00000012 _Bfree
+1fff88bc g     O .data	00000014 Serial2
+00009bb8  w    F .text	00000006 dma_ch0_isr
+1fff8aa0  w    O .data	00000016 usb_string_serial_number
+1fffdac4 g     O .bss	00000004 prettyCounter
+00009bb8  w    F .text	00000006 enet_tx_isr
+1fffd724 g     O .bss	00000004 cleartime
+
+
