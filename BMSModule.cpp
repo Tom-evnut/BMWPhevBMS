@@ -184,7 +184,7 @@ float BMSModule::getCellVoltage(int cell)
 float BMSModule::getLowCellV()
 {
   float lowVal = 10.0f;
-  for (int i = 0; i < 12; i++) if (cellVolt[i] < lowVal && cellVolt[i] > IgnoreCell) lowVal = cellVolt[i];
+  for (int i = 0; i < 16; i++) if (cellVolt[i] < lowVal && cellVolt[i] > IgnoreCell) lowVal = cellVolt[i];
   return lowVal;
 }
 

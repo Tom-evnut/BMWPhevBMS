@@ -733,7 +733,7 @@ SYMBOL TABLE:
 0000917c g     F .text	00000084 EventResponder::triggerEventNotImmediate()
 00000ab4 g     F .text	00000036 BMSModuleManager::checkstatus()
 000093f4  w    F .text	0000000c HardwareSerial3::write9bit(unsigned long)
-64b7e001 g       *ABS*	00000000 __rtc_localtime
+662c2808 g       *ABS*	00000000 __rtc_localtime
 0000a460 g     F .text	00000040 micros
 1fff91a4 g     O .bss	00000004 OverTime
 1fff919c g     O .bss	00000004 ErrorReason

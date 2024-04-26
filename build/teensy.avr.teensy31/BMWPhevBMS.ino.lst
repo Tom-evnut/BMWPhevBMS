@@ -350,7 +350,7 @@ float BMSModuleManager::getAvgCellVolt()
      368:	000510c0 	.word	0x000510c0
      36c:	000176ff 	.word	0x000176ff
      370:	20200000 	.word	0x20200000
-     374:	64b7e001 	.word	0x64b7e001
+     374:	662c2808 	.word	0x662c2808
      378:	4003e000 	.word	0x4003e000
      37c:	5a94c3a5 	.word	0x5a94c3a5
      380:	4007f000 	.word	0x4007f000
@@ -853,8 +853,8 @@ float BMSModule::getLowCellV()
 {
      7e2:	4680      	mov	r8, r0
      7e4:	1f05      	subs	r5, r0, #4
-     7e6:	f100 072c 	add.w	r7, r0, #44	; 0x2c
-  for (int i = 0; i < 12; i++) if (cellVolt[i] < lowVal && cellVolt[i] > IgnoreCell) lowVal = cellVolt[i];
+     7e6:	f100 073c 	add.w	r7, r0, #60	; 0x3c
+  for (int i = 0; i < 16; i++) if (cellVolt[i] < lowVal && cellVolt[i] > IgnoreCell) lowVal = cellVolt[i];
      7ea:	f855 4f04 	ldr.w	r4, [r5, #4]!
      7ee:	4631      	mov	r1, r6
      7f0:	4620      	mov	r0, r4
@@ -41105,7 +41105,7 @@ PORT_ISR_FUNCTION_CLZ(A)
 1fff8850:	40a00000                                ...@
 
 1fff8854 <firmver>:
-1fff8854:	0003853d                                =...
+1fff8854:	0003f948                                H...
 
 1fff8858 <maxac1>:
 1fff8858:	00000010                                ....
